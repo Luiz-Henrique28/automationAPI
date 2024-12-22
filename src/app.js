@@ -2,8 +2,8 @@ const express = require('express')
 
 require('dotenv').config()
 
-const fs = require('fs');
-const data = fs.readFileSync('../data/credentials.json', 'utf8')
+// const fs = require('fs');
+// const data = fs.readFileSync('../data/credentials.json', 'utf8')
 
 const app = express()
 const port = process.env.PORT || 4000
@@ -11,7 +11,7 @@ const port = process.env.PORT || 4000
 app.use(express.json())
 
 const checkCredentials = (req, res, next) => {
-  const credentials = JSON.parse(data)
+  const credentials = require('../data/credentials.js');
 
   const {filialName, filialKey} = req.body
 
