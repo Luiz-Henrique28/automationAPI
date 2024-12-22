@@ -1,4 +1,4 @@
-export default {
+module.exports = {
     "filiais": [
         {
             "filialName": "filial1",
